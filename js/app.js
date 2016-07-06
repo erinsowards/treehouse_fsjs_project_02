@@ -157,7 +157,7 @@ function searchHandler() {
 	
 	// Remove the pagination div, if it exists, and rebuild it with each search
 	if (paginationDiv) {
-        removeElement(paginationDiv, paginationDiv[0]);
+        removeElement(paginationDiv[0]);
     }
 	buildPaginationMenuHTML(searchResultsArray);
 	
@@ -289,19 +289,19 @@ function ifNoResultsFoundHTML(searchResultsArray) {
 		// Each empty search writes another p tag
 		// Remove the second p tag each time
 		if (messageP.length > 1) {
-			removeElement(messageP, messageP[1]);
+			removeElement(messageP[1]);
 		}
 	} 
 	else if (searchResultsArray.length > 0) {
 		// If the search yields results
 		// And if the message exists, remove it
 		if (messageP) {
-			removeElement(messageP, messageP[0]);
+			removeElement(messageP[0]);
 		}
 	} 
 }
 
-function removeElement(nodelist, elementToRemove) {	
+function removeElement(elementToRemove) {	
 	if (elementToRemove) {
         elementToRemove.parentNode.removeChild(elementToRemove);
     }
