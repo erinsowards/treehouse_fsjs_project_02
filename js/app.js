@@ -157,8 +157,8 @@ function searchHandler() {
 	
 	// Remove the pagination div, if it exists, and rebuild it with each search
 	if (paginationDiv) {
-        removeElement(paginationDiv[0]);
-    }
+		removeElement(paginationDiv[0]);
+	}
 	buildPaginationMenuHTML(searchResultsArray);
 	
 	// Prints out a message if no results found
@@ -303,8 +303,8 @@ function ifNoResultsFoundHTML(searchResultsArray) {
 
 function removeElement(elementToRemove) {	
 	if (elementToRemove) {
-        elementToRemove.parentNode.removeChild(elementToRemove);
-    }
+		elementToRemove.parentNode.removeChild(elementToRemove);
+	}
 }
 
 buildSearchFormHTML();
